@@ -9,6 +9,10 @@ module.exports = function () {
 				src: ['test/*.js']
 			}
 		},
-		styles: {}
+		styles: {
+			css: {
+				src: 'build/*.css'
+			}
+		}
 	};
 };
