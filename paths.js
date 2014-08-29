@@ -9,6 +9,8 @@ module.exports = function () {
 				src: ['test/*.js']
 			}
 		},
-		styles: {}
+		styles: {
+			src: 'less/**/*.less'
+		}
 	};
 };

@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var watch = require('gulp-watch');
 var karma = require('gulp-karma');
+var less = require('gulp-less');
 
 var paths = require('./paths.js');
 
@@ -11,6 +12,14 @@ gulp.task('clean',function(){
 	return gulp
 		.src(paths().build,{read:false})
 		.pipe(clean())
+	;
+});
+
+gulp.task('less',function(){
+	return gulp
+		.src(paths().styles.src)
+		.pipe(less())
+		.pipe(gulp.dest(paths().build))
 	;
 });
 
