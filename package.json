@@ -1,0 +1,27 @@
+{
+  "name": "eg-gulp",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp-clean": "^0.3.1",
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.3.4",
+    "gulp-jasmine": "^1.0.0",
+    "gulp-karma": "^0.0.4",
+    "gulp-uglify": "^0.3.2",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "gulp-watch": "^0.6.9",
+    "karma": "^0.12.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
