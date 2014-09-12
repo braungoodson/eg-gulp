@@ -6,7 +6,12 @@ module.exports = function () {
 			dest: 'scripts.js',
 			dest_min: 'scripts.min.js',
 			tests: {
-				src: ['test/*.js']
+				unit: {
+          src: ['test/*Spec.js']
+        },
+        e2e: {
+          src: ['test/*Suite.js']
+        }
 			}
 		},
 		styles: {}

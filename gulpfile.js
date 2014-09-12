@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var watch = require('gulp-watch');
 var karma = require('gulp-karma');
+var protractor = require('gulp-protractor');
 
 var paths = require('./paths.js');
 
@@ -32,7 +33,7 @@ gulp.task('watch',function(){
 gulp.task('dev',function(){
 	return gulp.watch([
 		paths().scripts.src,
-		paths().scripts.tests.src
+		paths().scripts.tests.unit.src
 	],['karma','build']);
 });
 
@@ -49,6 +50,16 @@ gulp.task('karma',function(){
 		})
 	;
 });
+
+gulp.task('e2e',function(){
+  return gulp
+    .src(paths().scripts.tests.e2e.src)
+    .pipe(protractor.protractor({
+      configFile: 'protractor.config.js',
+      args: ['--baseUrl', 'http://localhost:30000']
+    }))
+    .on('error',function(error){throw new Error(error);});
+})
 
 gulp.task('default',['clean','karma','build']);
 
