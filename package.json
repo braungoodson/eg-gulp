@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "directories": {
-    "test": "test"
+    "test": "gulp test",
+    "postinstall": "./node_modules/protractor/bin/webdriver-manager update"
   },
   "dependencies": {
     "express": "^4.9.0",
