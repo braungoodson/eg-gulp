@@ -1,0 +1,17 @@
+{
+  "name": "eg-gulp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/braungoodson/eg-gulp",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.24"
+  }
+}

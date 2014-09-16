@@ -1,7 +1,3 @@
-/* reviews.js */
-
-var reviews = {};
-
-(function(myObject){
-	myObject.myAttribute = 'myString';
-})(reviews)
+$GccReviewsProvider.$inject = [];
+function $GccReviewsProvider() {}
+angular.module('gcc.reviews').provider('gccReviews',$GccReviewsProvider);
